@@ -113,3 +113,43 @@ print(thisdict)
 #Another way to make a copy is to use the built-in function dict().
 thisdict=dict(mydict)
 print(thisdict)
+#-------------------------------------------------------------------------------------------------------------------------------------------------
+#Nested Dictionaries-A dictionary can contain dictionaries, this is called nested dictionaries.
+myfamily={
+    "child1":{
+        "name":"Emil",
+        "year":2004
+    },
+    "child2":{
+        "name":"tobias",
+        "year":2007
+    },
+    "chikd3":{
+        "name":"linus",
+        "year":2011
+    }
+    }
+print(myfamily)
+#Or, if you want to add three dictionaries into a new dictionary:
+child1={
+    "name":"divya",
+    "year":2006
+}
+child2={
+    "name":"madhu",
+    "year":2006
+}
+names={
+    "child1":child1,
+    "child2":child2
+}
+print(names)
+#-----------------------------------------------------------------------------------------------------------------------------------------
+#access items in nested dictionaries-To access items from a nested dictionary, you use the name of the dictionaries, starting with the outer dictionary:
+print(myfamily["child2"]["name"])
+#loop through nested dictionaries-You can loop through a dictionary by using the items() method like this:
+for x,obj in names.items():
+    print(x)
+    for y in obj:
+        print(y+":",obj[y])
+
