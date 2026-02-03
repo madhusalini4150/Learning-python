@@ -21,3 +21,9 @@ current_year=datetime.date.today().year
 age=current_year-year
 print(age)
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Currency Converter
+#Write a Python program to convert an amount in USD to another currency using a fixed exchange rate.
+exchange_rate=84.5#set it to a fixed number like 84.50
+amount_usd=float(input("enter amount in usd:"))
+convert_amount=exchange_rate*amount_usd
+print(f"{amount_usd} USD is equal to {convert_amount} in Loacal Currency")
