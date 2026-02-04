@@ -28,5 +28,29 @@ while i<6:
     i+=1
 else:
     print("i is no longer less than 6")
+#---------------------------------------------
+i=1
+n=int(input("enter number:"))
+while i<=n:
+    print(i,end="\n")
+    i+=1
+#-----------------------------------------------
+#Fibnocci Series-
+n=int(input("enter n:"))
+a,b=0,1
+print(a,end="\n")
+while n>1:
+    print(b,end="\n")
+    a,b=b,a+b
+    n-=1
+#----------------------------------------------
+#To find nth fibnocci number-
+n=int(input("enter n:"))
+a,b=0,1
+while n>1:
+    a,b=b,a+b
+    n-=1
+print(a)
+
 
 
