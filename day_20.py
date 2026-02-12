@@ -9,12 +9,17 @@ for i in range(rows):
     for j in range(i+1):
         print("*",end=' ')
     print()
-row=int(input("enter your no.of rows:"))
-for i in range(row,0,-1):
+#printing above pattern in reverse order
+print("pattern reversing")
+for i in range(rows,0,-1):
     for j in range(1,i+1):
         print("*",end=" ")
     print()
-
+#printing numbers patter 
+for i in range(rows):
+    for j in range(i+1):
+        print(i,end=" ")
+    print(" ")
 
 
        
