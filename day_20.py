@@ -1,31 +1,42 @@
-#python loops
-i=0 
-while i<5:
+#Nested Loops:
+#Nested While loops-A nested while loop in Python is a while loop placed inside the body of another while loop
+list1=[1,2,3]
+list2=[4,5,6]
+i=0
+while i<len(list1):
+    j=0
+    while j<len(list2):
+        print(list1[i],list2[j])
+        j+=1
+    print()
     i+=1
-    print(i)
-#priniting patter
-rows=5
-for i in range(rows):
-    for j in range(i+1):
-        print("*",end=' ')
+#------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Nested For loops-A nested for loop in Python is a for loop placed inside the body of another for loop
+for x in range(3):
+    for y in range(1,10):
+        print(y,end=" ")
     print()
-#printing above pattern in reverse order
-print("pattern reversing")
-for i in range(rows,0,-1):
-    for j in range(1,i+1):
-        print("*",end=" ")
-    print()
-#printing numbers patter 
-for i in range(rows):
-    for j in range(i+1):
-        print(i,end=" ")
-    print(" ")
-for i in range(1, rows + 1):  # Outer loop for rows
-    for j in range(rows  - i):  # Inner loop for spaces
-        print(" ", end=" ")
-    for k in range(1, 2 * i):  # Inner loop for stars
-        print("*", end=" ")
+ 
+
+rows=int(input("Enter the no.of rows:"))
+columns=int(input("Enter the no.of columns:"))
+symbol=input("Enter a symbol to use:")
+for x in range(rows):
+    for y in range(columns):
+        print(symbol,end="")
     print()
 
 
-       
+for x in range(3):
+    for y in range(2):
+        for z in range(2):
+            print(f"{x},{y},{z}")
+
+        
+colors=['red','blue','green']
+sizes=['L','M','S']
+for color in colors:
+    for size in sizes:
+        print(f'{color} - Size {size}')
+        
+#------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
