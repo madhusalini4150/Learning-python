@@ -1,4 +1,4 @@
-#Nested Loops:
+#Nested Loops:#Nested Loops-A nested loop is a loop inside a loop.The "inner loop" will be executed one time for each iteration of the "outer loop"
 #Nested While loops-A nested while loop in Python is a while loop placed inside the body of another while loop
 list1=[1,2,3]
 list2=[4,5,6]
@@ -10,6 +10,18 @@ while i<len(list1):
         j+=1
     print()
     i+=1
+
+
+i = 1   
+while i <= 6:
+    print("sky", end=" ")
+    j = 1
+    while j <= 3:
+        print("blue", end=" ")
+        j = j + 1
+    i = i + 1
+    print()
+
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #Nested For loops-A nested for loop in Python is a for loop placed inside the body of another for loop
 for x in range(3):
