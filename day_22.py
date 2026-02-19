@@ -27,3 +27,60 @@ def function():
     pass            #The pass statement is often used when developing, allowing you to define the structure first and implement details later.
 
 
+#Parameters-Parameters are variables written inside the function definition,they act as placeholders.
+#Arguments-Arguements are actual values passed to the function when calling it.
+def greet(name): #name is parameter
+    print('hello',name)
+greet("Riya") #Riya is parameter
+
+def add(a,b): #here a,b is parameters
+    return a+b
+result=add(10,20) #here 10,20 is arguments
+print(result)
+
+#Number of Arguments-By default,a function must be called with the correct number of arguments.if your function expects 2 arguments,you must call it with exactly 2 arguments.
+def my_function(fname,lname):
+    print(fname,lname)
+my_function("Emil","Refsnes") #if you try to call the function with the wrong number of arguments,you will get an error.
+
+#Default Parameter Values-we can assign default values to parameters.If the function is called without an argument,it uses the default value
+def my_fun(name="friend"): #friend is a default value
+    print("Hello",name)
+my_fun("Emil")
+my_fun()  #in this line it prints friend
+my_fun("Robert")
+my_fun("Linus")
+ 
+def greet(name,country="India"):
+    print(name,country)
+greet("Max")
+greet("Max","USA")
+ 
+def greetings(name="Peter"):
+    message=name+',welcome to python for Everyone!'
+    return message
+print()
+
+#Keyword Arguments(kwargs)-we can send arguments with the key=value syntax
+def my_function(animal,name):
+    print("I have a",animal)
+    print("My",animal+"'s name is",name)
+my_function(animal="dog",name="Buddy")
+#this way,with keyword arguments,the order of the arguments does not matter.
+def my_function(animal,name):
+    print("I have a",animal)
+    print("My",animal+"'s name is",name)
+my_function(name="Buddy",animal="dog")
+
+#Positional Arguments-when you call a function with arguments without using keywords,they are called positional arguments.Positional arguments must be in the correct order.
+def my_function(animal,name):
+    print("I have a",animal)
+    print("My",animal+"'s name is",name)
+my_function("dog","Buddy")
+#the order matters with positional arguments
+def my_function(animal,name):
+    print("I have a",animal)
+    print("My",animal+"'s name is",name)
+my_function("Buddy","dog")
+
+
