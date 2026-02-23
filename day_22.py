@@ -84,6 +84,7 @@ def my_function(animal,name):
 my_function("Buddy","dog")
 def animal(*name):
     print("i have a pet",name[1])
+    print("i have a pet",name[0])
 animal("dog","cat","cow")
 
 
