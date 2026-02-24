@@ -86,6 +86,12 @@ def animal(*name):
     print("i have a pet",name[1])
     print("i have a pet",name[0])
 animal("dog","cat","cow")
+#Mixing positional and keyword Arguments-you can mix positional and keyword arguments in a functional call.However, positional arguments must come before keyword arguments.
+def new_function(animal,name,age):
+    print("I have a", age, "year old", animal, "named", name)
+new_function("dog", name="Buddy",age=5)
+
+#Passing Different Data Types-You can send any data type as an argument to a function(string,number,list,dictionary,etc.)
 
 
 
