@@ -90,6 +90,7 @@ animal("dog","cat","cow")
 def new_function(animal,name,age):
     print("I have a", age, "year old", animal, "named", name)
 new_function("dog", name="Buddy",age=5)
+new_function("cat",name="mini",age=3)
 
 #Passing Different Data Types-You can send any data type as an argument to a function(string,number,list,dictionary,etc.)
 
