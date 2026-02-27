@@ -123,3 +123,36 @@ def my_function(a,b,/,*,c,d):
 result=my_function(4,6,c=50,d=10)
 print(result)
 
+#*args and *kwargs-*args and *kwargs allow function to accept a unknown number of arguments.
+#*args-Arbitrary Arguments are often shortened to *args 
+#Inside the function args becomes a tuple containing all the passed arguments
+def total(*args):
+    print(type(args))
+    print(sum(args))
+total(1,2)
+total(30,50)
+
+def my_function(*args):
+    print("first argument:",args[0])
+    print("second argument:",args[1])
+    print("All arguments:",args)
+my_function("Emil","Tobias","Linus")
+#Using *args with Regular Arguments:you can combine regular parameters with *args,Regular parameters must come before *args.
+def my_function(greeting,*names):
+    for name in names:
+        print(greeting,name)
+my_function("Hello","Emil","Tobias","Linus") #"hello" is assigned to greeting,and the rest are collected in names.
+
+def func(*kids):
+    print("The youngest child is"+kids[2])
+func("Emil","Tobias","Linus")
+
+#*args is useful when you want to create flexible functions
+def my_function(*numbers):
+    total=0
+    for i in numbers:
+        total+=i
+    return total
+print(my_function(1,2,3))
+print(my_function(10,10,20,30))
+print(my_function(6))
