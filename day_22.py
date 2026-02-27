@@ -93,6 +93,33 @@ new_function("dog", name="Buddy",age=5)
 new_function("cat",name="mini",age=3)
 
 #Passing Different Data Types-You can send any data type as an argument to a function(string,number,list,dictionary,etc.)
+def my_function(fruits):
+    for fruit in fruits:
+        print(fruit)
+my_fruits=["apple","banana","cherry"]
+my_function(my_fruits)
 
+#Positional-Only Arguments:you can specify that a function can have only positional arguments.To specify positional-only arguments,add ",/" after the parameters
+def my_function(name,/):
+    print("Hello",name)
+my_function("Emil")
+#without the ",/" you are actually allowed to use keyword arguments even if the function expects positional arguments
+def my_function(name):
+    print("Hello",name)
+my_function(name="Emil") #with ",/" you will get an error if you try to usse keyword arguments
 
+#Keyword-Only Arguments:To specify that a function can have only keyword arguments,add "*," before the parameters:
+def my_function(*,name):
+    print("Hello",name)
+my_function(name="Emil")
+#Without *,, you are allowed to use positional arguments even if the function expects keyword arguments
+def my_function(name):
+    print("Hello",name)
+my_function("emil") #With *,, you will get an error if you try to use positional arguments
+
+#Combining Positional-Only and Keyword-Only:parameters before / are positional-only, and parameters after * are keyword-only
+def my_function(a,b,/,*,c,d):
+    return a+b+c+d
+result=my_function(4,6,c=50,d=10)
+print(result)
 
