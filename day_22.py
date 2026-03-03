@@ -156,6 +156,7 @@ def my_function(*numbers):
 print(my_function(1,2,3))
 print(my_function(10,10,20,30))
 print(my_function(6))
+
 #python function arguments scope
 
 
